@@ -1,0 +1,354 @@
+{\rtf1\fbidis\ansi\ansicpg1256\deff0\nouicompat\deflang9217{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}{\f1\fnil\fcharset178 Times New Roman;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil\fcharset0 Courier New;}{\f4\fnil\fcharset178 Calibri;}{\f5\fnil\fcharset0 Calibri;}{\f6\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;\red0\green77\blue187;\red88\green89\blue91;\red0\green3\blue2;\red156\green133\blue192;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\ltrpar\ri1604\sl248\slmult0\cf1\f0\fs24\lang1033 1\f1\rtlch\lang9217\\ \f0\ltrch\lang1033 Consider the following statements\f1\rtlch\lang9217 : \f0\ltrch\lang1033\par
+
+\pard\ltrpar\ri2746\sl259\slmult0\qr\b Array Queue<int> queue = new Array Queue(); \b0\par
+
+\pard\ltrpar\li785\sl259\slmult0\b int x, y; \b0\par
+
+\pard\ltrpar\fi-10\li-5\ri280\sa107\sl248\slmult0      Show what is output by the following segment of code: \par
+
+\pard\ltrpar\fi-10\li936\ri3585\sl248\slmult0 x = 4; y = 5; queue.enqueue(x); queue. enqueue(y);  x = queue.front( ); queue.dequeue( ); queue. enqueue(x + 5);  queue. enqueue(16);  queue. enqueue(x);  queue. enqueue(y - 3);  system.out.println( "Queue Elements: "); while (!queue.isEmptyQueue()) \par
+
+\pard\ltrpar\fi-10\li936\ri280\sl248\slmult0\{ \par
+
+\pard\ltrpar\fi-10\li936\ri2510\sl248\slmult0 system.out.println(queue.front() ); queue.dequeue(); \par
+
+\pard\ltrpar\fi-10\li936\ri280\sl248\slmult0\} \par
+
+\pard\ltrpar\sl240\slmult1\par
+\cf2\f2\fs32 Output:\par
+\cf1\f0\par
+\f3 Queue Elements:\par
+5\par
+9\par
+16\par
+4\par
+
+\pard\ltrpar\fi-10\li10\ri280\sl248\slmult0 2\par
+\f0\fs40\par
+********************************************\fs24  \par
+
+\pard\ltrpar\ri1604\sl248\slmult0 2\\ What is the output of the following program segment? \fs28\par
+
+\pard\ltrpar\fi-10\li651\ri3074\sl248\slmult0\fs24 linkedQueue<int> queue = new linkedQueue(); queue.enqueue(10); queue.enqueue(20); cout << queue.front() << endl; queue.dequeue(); queue.enqueue(2 * queue.back()); queue.enqueue(queue.front());  queue. enqueue(5);  queue. enqueue(queue.back() - 2); linkedQueue<int> tempQueue = new linkedQueue() ; tempQueue = queue; while (!tempQueue.isEmptyQueue()) \fs28\par
+
+\pard\ltrpar\fi-10\li651\ri2927\sl248\slmult0\fs24\{ \fs28\par
+    system.out.println( \fs24 tempQueue.front() );      tempQueue.dequeue(); \fs28\par
+\fs24\} \fs28\par
+
+\pard\ltrpar\fi-10\li651\ri1565\sl248\slmult0 system.out.println( \fs24 queue.front() ); \fs28 system.out.println(\fs24 queue.back() ); \par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1\cf2\f2\fs32 Output\fs24 :\par
+
+\pard\ltrpar\fi-10\li651\ri1565\sl248\slmult0\cf0 10\par
+20\par
+40\par
+10\par
+5\par
+38\par
+40\par
+38\par
+\cf1\f0\par
+\fs40 *********************************\fs24\par
+
+\pard\ltrpar\fi-785\li770\ri3044\sl248\slmult0 3\\ Consider the following statements: ArrayStack<int> stack = new ArrayStack(); ArrayQueue<int> queue = new ArrayQueue(); \par
+
+\pard\ltrpar\fi-10\li795\ri280\sl248\slmult0 int x; \par
+
+\pard\ltrpar\fi-10\li-5\ri280\sl248\slmult0        Suppose the input is: \par
+
+\pard\ltrpar\fi-10\li783\ri280\sl248\slmult0 14\f2  \f0 8 14 22 64 35 19 32 7 11 13 30 -999 \par
+
+\pard\ltrpar\fi-10\li-5\ri280\sa88\sl248\slmult0       Show what is written by the following segment of code: \par
+
+\pard\ltrpar\li1066\ri5249\sl240\slmult1\qj\fs22 stack.push(0); queue.enqueue(0); \fs24 system.out.println( \fs22 x); while (x != -999) \fs24\par
+
+\pard\ltrpar\fi-427\li1493\ri5392\sl248\slmult0\fs22\{ switch (x % 4) \{ case 0: stack.push(x); break; \fs24\par
+
+\pard\ltrpar\fi-10\li1503\ri4657\sl248\slmult0\fs22 case 1: if (!stack.isEmptyStack()) \fs24\par
+
+\pard\ltrpar\fi427\li1066\ri3612\sl248\slmult0\fs22\{ \fs24 system.out.println( \fs22 "Stack Element = " ); \fs24 system.out.println( \fs22 stack.top()); stack.pop(); \fs24\par
+
+\pard\ltrpar\fi281\li770\ri6863\sl349\slmult0\fs22\} else \fs24\par
+
+\pard\ltrpar\fi-852\li785\ri2927\sl248\slmult0                  system.out.println( \fs22  "Sorry, the stack is empty." ); break; case 2: queue.enqueue(x); break; case 3: if (!queue.isEmptyQueue()) \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri2927\sl248\slmult0\fs22\{ \fs24\par
+system.out.println( \fs22 "Queue Element = " );  \fs24 system.out.println(\fs22  queue.front()); queue.dequeue(); \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri7143\sl248\slmult0\fs22\} else \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri2927\sl248\slmult0 system.out.println( \fs22  "Sorry, the queue is empty." ); break; \fs24\par
+
+\pard\ltrpar\fi852\li-15\ri4550\sl248\slmult0\fs22\} //end switch \fs24    system.out.println( \fs22 x); \fs24\par
+
+\pard\ltrpar\fi-852\li785\ri3924\sl248\slmult0\fs22           \} //end while \fs24 system.out.println( \fs22  "Stack Elements: "); while (!stack.isEmptyStack()) \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri2927\sl248\slmult0\fs22\{ \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri4654\sl248\slmult0 system.out.println(\fs22  stack.top() ); stack.pop(); \} \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri3295\sl248\slmult0 system.out.println( \fs22  "Queue Elements: "); while (!queue.isEmptyQueue()) \fs24\par
+
+\pard\ltrpar\fi-10\li780\ri2927\sl248\slmult0\fs22\{ \fs24\par
+system.out.println( \fs22 queue.front() ); queue.dequeue(); \fs24\par
+\fs22\} \par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1\cf2\f2\fs32 Output\fs24 :\par
+
+\pard\ltrpar\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\cf0\f3 14\par
+Stack Element = \par
+0\par
+8\par
+Sorry, the stack is empty.\par
+14\par
+Queue Element = \par
+0\par
+22\par
+Stack Element = \par
+14\par
+64\par
+Stack Element = \par
+22\par
+35\par
+Sorry, the stack is empty.\par
+19\par
+Queue Element = \par
+14\par
+32\par
+Stack Element = \par
+19\par
+7\par
+Sorry, the stack is empty.\par
+11\par
+Queue Element = \par
+32\par
+13\par
+Stack Element = \par
+11\par
+30\par
+Queue Element = \par
+35\par
+Stack Elements: \par
+13\par
+11\par
+Queue Elements: \par
+30\par
+\cf1\f0\fs40 ********************************************\fs24  \cf0\f3\par
+
+\pard\ltrpar\fi-10\li780\ri2927\sl248\slmult0\cf1\f0\par
+
+\pard\ltrpar\ri280\sl248\slmult0 4\\ Suppose that queue is a queueType object and the size of the array implementing queue is 100. Also, suppose that the value of queueFront is 50 and the value of queueRear is 99.\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li360\ri280\sl248\slmult0  a-\f2  \cf3\f0  \cf1 What are the values of queueFront and queueRear after adding an element to queue? \par
+{\pntext\f6\'B7\tab}b-\f2  \f0 What are the values of queueFront and queueRear after removing an element from queue? \par
+
+\pard\ltrpar\li720\sl259\slmult0\cf2\f2\par
+
+\pard\rtlpar\sa160\sl259\slmult0\qr\cf0\f4\rtlch\fs22\lang9217\par
+\cf2\f5\ltrch\lang1033 Given the initial values\f4\rtlch\lang9217 :\par
+\f5\ltrch\lang1033 queueFront = 50\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = 99\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 After adding an element\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = (queueRear + 1) % 100\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = (99 + 1) % 100\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = 0\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 The new values of queueFront and queueRear are\f4\rtlch\lang9217 :\par
+\f5\ltrch\lang1033 queueFront = 50\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = 0\f4\rtlch\lang9217\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\rtlpar\fi-2117\ri2477\sa160\sl259\slmult0\qr\f5\ltrch\lang1033 B\f4\rtlch\lang9217 ) \f5\ltrch\lang1033 After removing an element from the queue, the value of queueFront will be incremented by 1, and if it reaches the end of the array, it will wrap around to the beginning. The value of queueRear will remain unchanged\f4\rtlch\lang9217 .\par
+
+\pard\rtlpar\sa160\sl259\slmult0\qr\par
+\f5\ltrch\lang1033 Given the initial values\f4\rtlch\lang9217 :\par
+\f5\ltrch\lang1033 queueFront = 50\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = 99\f4\rtlch\lang9217\par
+\par
+\f5\ltrch\lang1033 After removing an element\f4\rtlch\lang9217 :\par
+\f5\ltrch\lang1033 queueFront = (queueFront + 1) % 100\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueFront = (50 + 1) % 100\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueFront = 51\f4\rtlch\lang9217\par
+\par
+\f5\ltrch\lang1033 The new values of queueFront and queueRear are\f4\rtlch\lang9217 :\par
+\f5\ltrch\lang1033 queueFront = 51\f4\rtlch\lang9217\par
+\f5\ltrch\lang1033 queueRear = 99elemen\f4\rtlch\lang9217\par
+\par
+
+\pard\ltrpar\li720\sl259\slmult0\cf1\f0\ltrch\fs40\lang1033 *****************************************\fs24\par
+
+\pard\ltrpar\ri280\sl248\slmult0\fs28 5\\ Suppose that queue is a queueType object and the size of the array implementing queue is 100. Also, suppose that the value of queueFront is 99 and the value of queueRear is 25. \par
+\par
+a-\f2  \f0 What are the values of queueFront and queueRear after adding an element to queue?\par
+\par
+ b-\f2  \f0 What are the values of queueFront and queueRear after removing an element from queue?\par
+\fs24  \par
+
+\pard\ltrpar\sa360\sl240\slmult1\cf2\f2 Here are the answers to your questions:\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 a) After adding an element to the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Remains unchanged at 99.\par
+{\pntext\f6\'B7\tab}queueRear:\~Becomes 26.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Elements are added to the rear of a queue.\par
+{\pntext\f6\'B7\tab}Since\~\f3\fs20 queueRear\f2\fs24\~is 25, it's incremented to 26 to accommodate the new element.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueFront\f2\fs24\~doesn't change during enqueue operations.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 b) After removing an element from the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Becomes 0.\par
+{\pntext\f6\'B7\tab}queueRear:\~Remains unchanged at 26.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Elements are removed from the front of a queue.\par
+{\pntext\f6\'B7\tab}Since\~\f3\fs20 queueFront\f2\fs24\~is 99 (the end of the array), it wraps around to 0 to point to the next element.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueRear\f2\fs24\~doesn't change during dequeue operations.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Key points:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Index of the first element.\par
+{\pntext\f6\'B7\tab}queueRear:\~Index of the next available position for insertion (one past the last element).\par
+{\pntext\f6\'B7\tab}Circular queue:\~\f3\fs20 queueFront\f2\fs24\~and\~\f3\fs20 queueRear\f2\fs24\~wrap around to the beginning when reaching the end of the array.\par
+
+\pard\ltrpar\ri280\sl248\slmult0\cf1\f0\fs40 ********************************************\fs24  \par
+\fs28 6\\ Suppose that queue is a queueType object and the size of the array implementing queue is 100. Also, suppose that the value of queueFront is 25 and the value of queueRear is 75. \par
+a-\f2  \f0 What are the values of queueFront and queueRear after adding an element to queue?\par
+ b-\f2  \f0 What are the values of queueFront and queueRear after removing an element from queue? \par
+\fs24\par
+
+\pard\ltrpar\sa360\sl240\slmult1\cf2\f2 Here are the answers to your questions:\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 a) After adding an element to the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Remains unchanged at 25.\par
+{\pntext\f6\'B7\tab}queueRear:\~Becomes 76.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Elements are added to the rear of a queue.\par
+{\pntext\f6\'B7\tab}Since\~\f3\fs20 queueRear\f2\fs24\~is 75, it's incremented to 76 to accommodate the new element.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueFront\f2\fs24\~doesn't change during enqueue operations.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 b) After removing an element from the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Becomes 26.\par
+{\pntext\f6\'B7\tab}queueRear:\~Remains unchanged at 76.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Elements are removed from the front of a queue.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueFront\f2\fs24\~is incremented to 26 to point to the next element after removal.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueRear\f2\fs24\~doesn't change during dequeue operations.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Key points:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Index of the first element in the queue.\par
+{\pntext\f6\'B7\tab}queueRear:\~Index of the next available position for insertion (one past the last element).\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueFront\f2\fs24\~and\~\f3\fs20 queueRear\f2\fs24\~only move in their respective directions (front increments for dequeue, rear increments for enqueue).\par
+
+\pard\ltrpar\ri280\sl248\slmult0\cf1\f0\fs40 ********************************************\fs24  \cf2\par
+\cf1\fs28 7\\ Suppose that queue is a queueType object and the size of the array implementing queue is 100. Also, suppose that the value of queueFront is 99 and the value of queueRear is 99.\par
+ a-\f2  \f0 What are the values of queueFront and queueRear after adding an element to queue? \par
+b-\f2  \f0 What are the values of queueFront and queueRear after removing an element from queue? \par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1\cf2\f2\fs27 a) After adding an element to the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 This situation indicates a\~full queue. Attempting to add an element when\~\f3\fs20 queueFront\f2\fs27\~and\~\f3\fs20 queueRear\f2\fs27\~are both at 99 (the end of the array) will likely result in an error or exception, as there's no space for the new element.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 b) After removing an element from the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Becomes 0 (wraps around to the beginning).\par
+{\pntext\f6\'B7\tab}queueRear:\~Remains unchanged at 99.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Removing an element from the front is possible even when\~\f3\fs20 queueFront\f2\fs27\~is at the end of the array. It wraps around to the beginning, maintaining the circular queue structure.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueRear\f2\fs27\~doesn't change during dequeue operations.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Key points:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Full queue:\~When\~\f3\fs20 queueFront\f2\fs27\~and\~\f3\fs20 queueRear\f2\fs27\~are both at the end of the array, it usually signifies a full queue, preventing further enqueue operations.\par
+{\pntext\f6\'B7\tab}Circular queue:\~Both\~\f3\fs20 queueFront\f2\fs27\~and\~\f3\fs20 queueRear\f2\fs27\~can wrap around to the beginning when they reach the end of the array.\par
+{\pntext\f6\'B7\tab}Dequeue from a full queue:\~Removing elements from a full queue is still possible, as\~\f3\fs20 queueFront\f2\fs27\~can wrap around to create space\par
+
+\pard\ltrpar\ri280\sl248\slmult0\cf1\f0\fs40 ********************************************\fs24  \cf2\par
+
+\pard\ltrpar\li720\sl259\slmult0\cf1  \par
+
+\pard\ltrpar\ri280\sa114\sl248\slmult0\fs32 8\\ Write a function, \b reverseQueue\b0 , that takes as a parameter a queue object and uses a stack object to reverse the elements of the queue. \par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1\cf2\f2\fs27 a) After adding an element to the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 This situation indicates a\~full queue. Attempting to add an element when\~\f3\fs20 queueFront\f2\fs27\~and\~\f3\fs20 queueRear\f2\fs27\~are both at 99 (the end of the array) will likely result in an error or exception, as there's no space for the new element.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 b) After removing an element from the queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 queueFront:\~Becomes 0 (wraps around to the beginning).\par
+{\pntext\f6\'B7\tab}queueRear:\~Remains unchanged at 99.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Removing an element from the front is possible even when\~\f3\fs20 queueFront\f2\fs27\~is at the end of the array. It wraps around to the beginning, maintaining the circular queue structure.\par
+{\pntext\f6\'B7\tab}\f3\fs20 queueRear\f2\fs27\~doesn't change during dequeue operations.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Key points:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Full queue:\~When\~\f3\fs20 queueFront\f2\fs27\~and\~\f3\fs20 queueRear\f2\fs27\~are both at the end of the array, it usually signifies a full queue, preventing further enqueue operations.\par
+{\pntext\f6\'B7\tab}Circular queue:\~Both\~\f3\fs20 queueFront\f2\fs27\~and\~\f3\fs20 queueRear\f2\fs27\~can wrap around to the beginning when they reach the end of the array.\par
+{\pntext\f6\'B7\tab}Dequeue from a full queue:\~Removing elements from a full queue is still possible, as\~\f3\fs20 queueFront\f2\fs27\~can wrap around to create space\par
+
+\pard\ltrpar\ri280\sa114\sl248\slmult0\cf1\f0\fs40 ********************************************\fs24  \par
+
+\pard\ltrpar\ri280\sa123\sl240\slmult1\cf4\fs28 9\\ Suppose an initially empty queue \i Q \i0 has performed a total of 32 enqueue operations, 10 first operations, and 15 dequeue operations, 5 of which returned null to indicate an empty queue. What is the current size of \i Q\i0 ?\cf1  \par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1\cf2\f2\fs24 Explanation:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Enqueue operations:\~Add elements to the queue, increasing its size. There have been 32 enqueue operations, so they added 32 elements.\par
+{\pntext\f6\'B7\tab}First operations:\~Only retrieve the front element without removing it, so they don't affect the size.\par
+{\pntext\f6\'B7\tab}Dequeue operations:\~Remove elements from the queue, decreasing its size. There have been 15 dequeue operations, but only 10 of them were successful (5 returned null, indicating an empty queue). So, only 10 elements were actually removed.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Calculating the size:\par
+Starting with an empty queue:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-360\li720\sb100\sa150\sl240\slmult1\tx720 Add 32 elements: 0 + 32 = 32\par
+{\pntext\f6\'B7\tab}Remove 10 elements: 32 - 10 = 22\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Therefore, the current size of Q is 22.\par
+
+\pard\ltrpar\ri280\sa123\sl240\slmult1\cf1\f0\fs40 ********************************************\fs24  \cf2\par
+
+\pard\ltrpar\ri280\sl240\slmult1\cf4\fs28 10\\ What values are returned during the following sequence of deque \i\fs24 (double ended queue)\i0\fs28  ADT operations, on an initially empty deque? addFirst(3), addLast(8), addLast(9), addFirst(1), last( ), isEmpty( ), addFirst(2), removeLast( ), addLast(7), first( ), last( ), addLast(4), size( ), removeFirst( ), removeFirst( ).\cf1  \par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent360{\pntxtb\'B7}}\ltrpar\fi-10\li360\sb100\sa150\sl240\slmult1\cf2\f2\fs24 addFirst(3):\~Adds 3 to the front of the deque.\par
+{\pntext\f6\'B7\tab}addLast(8):\~Adds 8 to the back of the deque.\par
+{\pntext\f6\'B7\tab}addLast(9):\~Adds 9 to the back of the deque.\par
+{\pntext\f6\'B7\tab}addFirst(1):\~Adds 1 to the front of the deque.\par
+{\pntext\f6\'B7\tab}last( ):\~Returns the last element, which is 9.\par
+{\pntext\f6\'B7\tab}isEmpty( ):\~Returns False, as the deque is not empty.\par
+{\pntext\f6\'B7\tab}addFirst(2):\~Adds 2 to the front of the deque.\par
+{\pntext\f6\'B7\tab}removeLast( ):\~Removes and returns the last element, which is 9.\par
+{\pntext\f6\'B7\tab}addLast(7):\~Adds 7 to the back of the deque.\par
+{\pntext\f6\'B7\tab}first( ):\~Returns the first element, which is 2.\par
+{\pntext\f6\'B7\tab}last( ):\~Returns the last element, which is 7.\par
+{\pntext\f6\'B7\tab}addLast(4):\~Adds 4 to the back of the deque.\par
+{\pntext\f6\'B7\tab}size( ):\~Returns the size of the deque, which is 6.\par
+{\pntext\f6\'B7\tab}removeFirst( ):\~Removes and returns the first element, which is 2.\par
+{\pntext\f6\'B7\tab}removeFirst( ):\~Removes and returns the new first element, which is 1.\par
+
+\pard\ltrpar\sb360\sa360\sl240\slmult1 Final state of the deque: [3, 8, 7, 4]\par
+
+\pard\ltrpar\ri280\sl240\slmult1\f0\par
+
+\pard\ltrpar\li653\sa69\sl259\slmult0  \par
+
+\pard\ltrpar\keep\keepn\li73\sl259\slmult0\qc\cf5\b\fs34 Good Luck \par
+
+\pard\rtlpar\sa200\sl276\slmult1\qr\cf0\b0\f5\fs22\lang9\par
+}
+ 

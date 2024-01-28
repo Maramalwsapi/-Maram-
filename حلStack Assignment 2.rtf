@@ -1,0 +1,357 @@
+{\rtf1\fbidis\ansi\ansicpg1256\deff0\nouicompat\deflang9217{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil\fcharset0 Bahnschrift;}{\f3\fnil\fcharset178 Calibri;}{\f4\fnil\fcharset0 Calibri;}{\f5\fnil Calibri;}}
+{\colortbl ;\red88\green89\blue91;\red0\green0\blue0;\red79\green129\blue189;\red0\green77\blue187;\red192\green192\blue192;\red227\green227\blue227;\red0\green3\blue2;\red156\green133\blue192;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\ltrpar\sl259\slmult0\cf1\f0\fs24\lang1033  \cf2\par
+
+\pard\ltrpar\sa8\sl249\slmult0\cf3\fs28 1\\ Trace the following code, showing the contents of the stack after each invocation: \par
+
+\pard\ltrpar\fi-10\li1143\ri4445\sa8\sl249\slmult0\cf2\fs24 Stack stack = new Stack(); \par
+stack.push(new Character('A')); \par
+\cf4\highlight5\f1 A\par
+\cf2\highlight0\f0\par
+stack.push(new Character('B')); \par
+\cf4\highlight5\f1 A, B\par
+\f0\fs32\par
+\cf2\highlight0\fs24 stack.push(new Character('C')); \par
+\cf4\highlight5\f1 A,B,C\par
+\f0\fs32\par
+\cf2\highlight0\fs24 stack.pop();\par
+\cf4\highlight5\f1 A,B\par
+\cf2\highlight0\f0\par
+ stack.pop(); \par
+\cf4\highlight5\f1 A\par
+\cf2\highlight0\f0\par
+stack.push(new Character('D'));\cf6\f1\fs21  \par
+\cf4\highlight5\fs24 A,D\f0\fs32  \par
+\cf2\highlight0\fs24\par
+stack.push(new Character('E'));\par
+\cf4\highlight5  A,D,\f1\fs20 E\f0\fs24\par
+\cf2\highlight0\par
+stack.push(new Character('F')); \par
+\cf4\highlight5\f1  A,D,E,F\f0\fs32\par
+\cf2\highlight0\fs24\par
+stack.pop();\par
+\cf4\highlight5\f1  A,D,E\f0\fs32  \par
+\cf2\highlight0\fs24\par
+
+\pard\ltrpar\sl240\slmult1 stack.push(new Character('G')); stack.pop(); \cf4\highlight5\f1\fs28\line\f2 A,D,E,G\f1\par
+
+\pard\ltrpar\fi-10\li1143\ri4445\sa8\sl249\slmult0\cf2\highlight0\f0\fs24\par
+\par
+stack.pop(); \par
+\cf4\highlight5\f1\fs28  A,D,E     \par
+\par
+\cf2\highlight0\f0\fs24 stack.pop(); \cf4\highlight5\f1\fs28\par
+A,D\par
+\par
+\cf2\highlight0\f0\fs24 stack.pop(); \cf4\highlight5\f1\fs28\par
+A\f0\fs36\par
+
+\pard\ltrpar\li1133\sl259\slmult0\cf2\highlight0\fs24  \cf3\fs28\par
+
+\pard\ltrpar\sl246\slmult0\cf2 *************************************************************\cf3\par
+\cf2 2\\ Suppose an initially empty \b ArrayStack \i S\b0  \i0 has performed a total of \b 25 push\b0  operations, \b 12 top\b0  operations, and \b 10 pop\b0  operations, 3 of which returned null to indicate an empty stack. What is the current size of \b\i S\b0\i0 ? And what is the value of the instance variable \b\fs32 t\b0\fs28 ?  \par
+
+\pard\ltrpar\li636\sl246\slmult0\fs24\par
+
+\pard\rtlpar\sa160\sl259\slmult0\qr\cf4\f3\rtlch\lang9217\par
+\f4\ltrch\lang1033 Given\f3\rtlch\lang9217 :\par
+- \f4\ltrch\lang1033 Total push operations\f3\rtlch\lang9217 : \f4\ltrch\lang1033 25\f3\rtlch\lang9217\par
+- \f4\ltrch\lang1033 Total top operations\f3\rtlch\lang9217 : \f4\ltrch\lang1033 12\f3\rtlch\lang9217\par
+- \f4\ltrch\lang1033 Total pop operations\f3\rtlch\lang9217 : \f4\ltrch\lang1033 10\f3\rtlch\lang9217  (\f4\ltrch\lang1033 3\f3\rtlch\lang9217  \f4\ltrch\lang1033 of which returned null\f3\rtlch\lang9217 )\par
+\par
+\f4\ltrch\lang1033 The size of the stack\f3\rtlch\lang9217  (`\f4\ltrch\lang1033 S\f3\rtlch\lang9217 `) \f4\ltrch\lang1033 can be calculated as follows\f3\rtlch\lang9217 :\par
+\f4\ltrch\lang1033 Size of S\f3\rtlch\lang9217  = \f4\ltrch\lang1033 Total push operations\f3\rtlch\lang9217  - \f4\ltrch\lang1033 Total pop operations\f3\rtlch\lang9217  + \f4\ltrch\lang1033 number of null returns\f3\rtlch\lang9217\par
+\par
+\f4\ltrch\lang1033 Size of S\f3\rtlch\lang9217  = \f4\ltrch\lang1033 25\f3\rtlch\lang9217  - \f4\ltrch\lang1033 10\f3\rtlch\lang9217  + \f4\ltrch\lang1033 3\f3\rtlch\lang9217  = \f4\ltrch\lang1033 18\f3\rtlch\lang9217\par
+\par
+\f4\ltrch\lang1033 Therefore\f3\rtlch\lang9217 , \f4\ltrch\lang1033 the current size of the ArrayStack\f3\rtlch\lang9217  `\f4\ltrch\lang1033 S\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 is\f3\rtlch\lang9217  \f4\ltrch\lang1033 18\f3\rtlch\lang9217 .\par
+\par
+\f4\ltrch\lang1033 The instance variable\f3\rtlch\lang9217  `\f4\ltrch\lang1033 t\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 represents the index of the top element in the stack\f3\rtlch\lang9217 . \f4\ltrch\lang1033 Since the stack is zero\f3\rtlch\lang9217 -\f4\ltrch\lang1033 based\f3\rtlch\lang9217  (\f4\ltrch\lang1033 the first element is at\f3\rtlch\lang9217  \f4\ltrch\lang1033 Index\f3\rtlch\lang9217  \f4\ltrch\lang1033 0\f3\rtlch\lang9217 ), `\f4\ltrch\lang1033 t\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 will be equal to the current size of\f3\rtlch\lang9217  `\f4\ltrch\lang1033 S\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 minus\f3\rtlch\lang9217  \f4\ltrch\lang1033 1\f3\rtlch\lang9217 .\par
+\par
+\f4\ltrch\lang1033 T\f3\rtlch\lang9217  = \f4\ltrch\lang1033 Size of S\f3\rtlch\lang9217  \f5\ltrch\endash\f3\rtlch  \f4\ltrch\lang1033 1\f3\rtlch\lang9217  = \f4\ltrch\lang1033 18\f3\rtlch\lang9217  \f5\ltrch\endash\f3\rtlch  \f4\ltrch\lang1033 1\f3\rtlch\lang9217  = \f4\ltrch\lang1033 17\f3\rtlch\lang9217\par
+\par
+\f4\ltrch\lang1033 Therefore\f3\rtlch\lang9217 , \f4\ltrch\lang1033 the value of the instance variable\f3\rtlch\lang9217  `\f4\ltrch\lang1033 t\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 is\f3\rtlch\lang9217  \f4\ltrch\lang1033 17\f3\rtlch\lang9217 .\par
+
+\pard\ltrpar\sb100\sa150\sl240\slmult1\tx720\f1\ltrch\fs28\lang1033\par
+
+\pard\ltrpar\li636\sl246\slmult0\f0\fs24\par
+
+\pard\ltrpar\li720\sl259\slmult0\cf7  \cf2\fs28 ********************************************************\fs24\par
+
+\pard\ltrpar\sa8\sl249\slmult0\fs28 3\\ Evaluate the following postfix expressions (true or false):\cf7  \cf2\par
+\fs24 a\\8 2 + 3 * 16 4 / - = \par
+b\\12 2 5 5 1 / / * 8 7 + - = \par
+c\\70 14 4 5 15 3 / * - / 6 + = \par
+d\\3 5 6 * + 13 - 18 2 / + = \par
+\par
+
+\pard\ltrpar\li806\sa8\sl249\slmult0\cf4\highlight5\f1\fs28 a. True\line b. False\line c. True\line d. True\par
+\f0\par
+
+\pard\ltrpar\li566\sl259\slmult0\cf2\highlight0\fs24  \fs28 ********************************************************\fs24\par
+
+\pard\ltrpar\sa8\sl249\slmult0\fs28 4\\ Convert the following infix expressions to postfix notations, and convert the first two postfix notations to java code using stack operations: \par
+a\cf1 . \cf2 (A + B) * (C + D) - E \par
+b\\ A - (B + C) * D + E / F \par
+c\\ ((A + B) / (C - D) + E) * F - G \par
+
+\pard\ltrpar\sa110\sl249\slmult0 d\\ A+B*(C+D)-E/F*G+H \par
+\fs24\par
+
+\pard\ltrpar\sa8\sl249\slmult0\cf4\fs28 import java.util.Stack;\par
+\par
+public class PostfixEvaluation \{\par
+    public static int evaluatePostfix(String postfix) \{\par
+        Stack<Integer> stack = new Stack<>();\par
+        for (int i = 0; i < postfix.length(); i++) \{\par
+            char c = postfix.charAt(i);\par
+            if (Character.isDigit(c)) \{\par
+                stack.push(c - '0');\par
+            \} else \{\par
+                int operand2 = stack.pop();\par
+                int operand1 = stack.pop();\par
+                switch (c) \{\par
+                    case '+':\par
+                        stack.push(operand1 + operand2);\par
+                        break;\par
+                    case '-':\par
+                        stack.push(operand1 - operand2);\par
+                        break;\par
+                    case '*':\par
+                        stack.push(operand1 * operand2);\par
+                        break;\par
+                    case '/':\par
+                        stack.push(operand1 / operand2);\par
+                        break;\par
+                \}\par
+            \}\par
+        \}\par
+        return stack.pop();\par
+    \}\par
+\par
+    public static void main(String[] args) \{\par
+        String postfix = "AB+CD+*E-";\par
+        int result = evaluatePostfix(postfix);\par
+        System.out.println("Result: " + result);\par
+    \}\par
+\}\par
+\cf2\fs24\par
+
+\pard\ltrpar\sa110\sl249\slmult0 ********************************************************************\par
+
+\pard\ltrpar\sa8\sl249\slmult0\fs28 5\\ Write the definition of the function template \b printListReverse\b0  that uses a stack to print a linked list in reverse order. Assume that this function is a member of the class \b linkedStack\b0 ,\par
+ \par
+\cf4 template <typename T>\par
+void linkedStack<T>::printListReverse() const \{\par
+    stack<T> s;\par
+    nodeType<T>* current = this->stackTop;\par
+\par
+    while (current != nullptr) \{\par
+        s.push(current->info);\par
+        current = current->link;\par
+    \}\par
+\par
+    while (!s.empty()) \{\par
+        cout << s.top() << " ";\par
+        s.pop();\par
+    \}\par
+\}\par
+
+\pard\ltrpar\li720\sl259\slmult0\cf2\fs24  \par
+*************************************************8***************\par
+
+\pard\ltrpar\sa8\sl249\slmult0\fs32 6\\ Write this client method using only the push(), top(), pop(), and isEmpty() methods:  \par
+
+\pard\ltrpar\keep\keepn\fi-10\li715\sa10\sl249\slmult0\b\fs28 public static <E> void reverse(ArrayStack<E> stack)  // reverses the contents of the specified stack \par
+\fs24\par
+
+\pard\ltrpar\fi-10\li77\sa8\sl249\slmult0\cf4\b0\fs28 public static <E> void reverse(ArrayStack<E> stack) \{\par
+    Stack<E> tempStack = new Stack<>();\par
+    while (!stack.isEmpty()) \{\par
+        tempStack.push(stack.pop());\par
+    \}\par
+    while (!tempStack.isEmpty()) \{\par
+        stack.push(tempStack.pop());\par
+    \}\par
+\}\par
+
+\pard\ltrpar\sa110\sl249\slmult0\cf2\fs24  ************************************************************************\par
+
+\pard\ltrpar\sa8\sl249\slmult0\fs28 7\\ Write this client method using only the push(), top(), pop(), and isEmpty() methods:  \par
+
+\pard\ltrpar\fi-10\li715\ri1371\sa10\sl249\slmult0\b public static <E> E popBottom(LinkedStack<E> stack) // removes and returns the bottom element of the specified stack \par
+\par
+\cf4\b0 public static <E> E popBottom(LinkedStack<E> stack) \{\par
+    Stack<E> tempStack = new Stack<>();\par
+    while (!stack.isEmpty()) \{\par
+        tempStack.push(stack.pop());\par
+    \}\par
+    E bottomElement = tempStack.pop();\par
+    while (!tempStack.isEmpty()) \{\par
+        stack.push(tempStack.pop());\par
+    \}\par
+    return bottomElement;\par
+\}\par
+\par
+
+\pard\ltrpar\li720\sl259\slmult0\cf2\b\fs24  \b0 ******************************************************************\par
+
+\pard\ltrpar\sa8\sl249\slmult0\fs28 8\\ Add this member method to the ArrayStack class : \par
+
+\pard\ltrpar\keep\keepn\fi-10\li715\sa10\sl249\slmult0\b  public E topSecond() // returns the second from the top element of this stack \par
+\cf4\fs32\par
+
+\pard\ltrpar\fi-10\li77\sa8\sl249\slmult0\b0\fs28 public E topSecond() \{\par
+    if (this.size() < 2) \{\par
+        throw new NoSuchElementException("Stack has less than two elements");\par
+    \}\par
+    E top = this.pop();\par
+    E second = this.top();\par
+    this.push(top);\par
+    return second;\par
+\}\par
+\cf2\par
+\fs24 ***********************************************************************\fs28\par
+
+\pard\ltrpar\li720\sl259\slmult0\fs24  \par
+
+\pard\ltrpar\fi-360\li705\ri2345\sa8\sl249\slmult0\fs28 9\\\f1  \f0 Add this member method to the ArrayStack class : \b  public E popSecond() \b0\par
+
+\pard\ltrpar\keep\keepn\fi-10\li715\sa10\sl249\slmult0\b // removes and returns the second element of this stack \par
+
+\pard\ltrpar\fi-10\li77\sa8\sl249\slmult0\b0\fs24\par
+\cf4\fs28 public E popSecond() \{\par
+    if (this.size() < 2) \{\par
+        throw new NoSuchElementException("Stack has less than two elements");\par
+    \}\par
+    E top = this.pop();\par
+    E second = this.pop();\par
+    this.push(top);\par
+    return second;\par
+\}\par
+\cf2\fs24 ***********************************************************************\cf4\fs28\par
+
+\pard\ltrpar\li720\sl259\slmult0\b  \b0\par
+
+\pard\ltrpar\fi-360\li705\ri2285\sa8\sl249\slmult0\cf2 10\\ Add this member method to the LinkedStack class: \b public E bottom() \b0\par
+
+\pard\ltrpar\keep\keepn\fi-10\li715\sa10\sl249\slmult0\b // returns the bottom element of this stack \par
+\par
+
+\pard\ltrpar\fi-10\li77\sa8\sl249\slmult0\cf4\b0 public E bottom() \{\par
+    if (this.isEmpty()) \{\par
+        throw new NoSuchElementException("Stack is empty");\par
+    \}\par
+    nodeType<E> current = this.top;\par
+    while (current.link != null) \{\par
+        current = current.link;\par
+    \}\par
+    return current.info;\par
+\}\par
+
+\pard\ltrpar\li720\sl259\slmult0\cf2\b\fs24  \b0 ******************************************************************\par
+\par
+
+\pard\ltrpar\fi-360\li705\ri2405\sa8\sl249\slmult0\fs28 11\\\f1  \f0 Add this member method to the ArrayStack class: \b public E popbottom() \b0\par
+
+\pard\ltrpar\keep\keepn\fi-10\li715\sa10\sl249\slmult0\b // removes and returns the bottom element of this stack\par
+\par
+
+\pard\ltrpar\fi-10\li77\sa8\sl249\slmult0\cf4\b0 public E popbottom() \{\par
+  // check if the stack is empty\par
+  if (isEmpty()) \{\par
+    throw new EmptyStackException();\par
+  \}\par
+  // get the bottom element\par
+  E bottom = data[0];\par
+  // shift the elements to the left\par
+  for (int i = 0; i < t; i++) \{\par
+    data[i] = data[i + 1];\par
+  \}\par
+  // decrement the top index\par
+  t--;\par
+  // return the bottom element\par
+  return bottom;\par
+\}\par
+\par
+\cf2 *************************************************************\b\fs24\par
+
+\pard\ltrpar\keep\keepn\fi-10\li715\sa10\sl249\slmult0  \par
+
+\pard\ltrpar\li720\sl259\slmult0  \b0\par
+
+\pard\ltrpar\fi-10\li216\sa181\sl249\slmult0\fs28 12-\f1  \b\f0 Consider the following segment code with the following informations: \b0\i  \i0\par
+
+\pard\ltrpar\sl259\slmult0\tqc\tx720\tqc\tx6131\f4\fs24\tab\super\i\f0\fs40  \tab\nosupersub\i0\fs24 Public static void main (string []args) \fs28\par
+
+\pard\ltrpar\sa8\sl249\slmult0\tqc\tx2135\tqc\tx4730 -\f1  \tab\f0 Assume (capacity = 10, size = 0,  \tab\fs24        \{ \fs28\par
+
+\pard\ltrpar\li4609\sl259\slmult0\fs24      Stack<int>  stack =new ArrayStack (10); \fs28\par
+
+\pard\ltrpar\sa141\sl249\slmult0\tqc\tx977\tqc\tx4609\f4\fs24\tab\f0\fs28  top = 0) \tab\fs24  \fs28\par
+
+\pard\ltrpar\sa8\sl249\slmult0\tqc\tx1965\tqc\tx5888\f4\fs24\tab\f0\fs28 After execution of this code.. \tab\fs24     for (int i=1; i<=10; i++) \fs28\par
+
+\pard\ltrpar\sl259\slmult0\tqc\tx4609\tqc\tx5188\tqc\tx6563\f4\fs24\tab\f0  \tab  \tab if (i % 3 != 0) \fs28\par
+
+\pard\ltrpar\sa8\sl352\slmult0 a\\ What are the contents (elements)  \tab\fs24  \tab  \tab  \{       stack.push(i* 2);       \} \fs28 of the stack? \tab\fs24                     else    \fs28\par
+
+\pard\ltrpar\sl259\slmult0\tqc\tx4609\tqc\tx5188\tqc\tx6085\f4\fs24\tab\f0  \tab  \tab    \{     \fs28\par
+
+\pard\ltrpar\sa8\sl249\slmult0 b\\ What are the values of the variables \fs24            \tab         stack.pop();           \} \fs28\par
+
+\pard\ltrpar\fi3902\li708\ri3227\sa168\sl240\slmult1\fs24  \i\f4\} \ul\i0\f0\fs28 count\ulnone , \ul top\ulnone ? \par
+
+\pard\ltrpar\sa8\sl356\slmult0 c\\ What are the element of the \b top( )\b0  method in the stack? \par
+
+\pard\ltrpar\sa126\sl249\slmult0 d\\ Is the stack full? Why? \par
+
+\pard\ltrpar\sa123\sl249\slmult0 e\\ Make the stack return to the empty state? \par
+
+\pard\rtlpar\sa160\sl259\slmult0\qr\cf4\f4\fs22    \f3\rtlch\lang9217\par
+\f4\ltrch\fs24\lang1033 Public static void main\f3\rtlch\lang9217  (\f4\ltrch\lang1033 string\f3\rtlch\lang9217  []\f4\ltrch\lang1033 args\f3\rtlch\lang9217 )\par
+ \{\par
+ \f4\ltrch\lang1033 Stack\f3\rtlch\lang9217 <\f4\ltrch\lang1033 int\f3\rtlch\lang9217 > \f4\ltrch\lang1033 stack\f3\rtlch\lang9217  =\f4\ltrch\lang1033 new ArrayStack\f3\rtlch\lang9217  (\f4\ltrch\lang1033 10\f3\rtlch\lang9217 );\par
+ \f4\ltrch\lang1033 for\f3\rtlch\lang9217  (\f4\ltrch\lang1033 int i\f3\rtlch\lang9217 =\f4\ltrch\lang1033 1\f3\rtlch\lang9217 ; \f4\ltrch\lang1033 i\f3\rtlch\lang9217 <=\f4\ltrch\lang1033 10\f3\rtlch\lang9217 ; \f4\ltrch\lang1033 i\f3\rtlch\lang9217 ++)\par
+\f4\ltrch\lang1033 if\f3\rtlch\lang9217  (\f4\ltrch\lang1033 i\f3\rtlch\lang9217  % \f4\ltrch\lang1033 3\f3\rtlch\lang9217  != \f4\ltrch\lang1033 0\f3\rtlch\lang9217 )\par
+\{ \f4\ltrch\lang1033 stack\f3\rtlch\lang9217 .\f4\ltrch\lang1033 push\f3\rtlch\lang9217 (\f4\ltrch\lang1033 i\f3\rtlch\lang9217 * \f4\ltrch\lang1033 2\f3\rtlch\lang9217 ); \}\par
+ \f4\ltrch\lang1033 else\f3\rtlch\lang9217  \par
+ \{ \par
+ \f4\ltrch\lang1033 stack\f3\rtlch\lang9217 .\f4\ltrch\lang1033 popa\f3\rtlch\lang9217 ) \f4\ltrch\lang1033 After the execution of the code\f3\rtlch\lang9217 , \f4\ltrch\lang1033 the contents\f3\rtlch\lang9217  (\f4\ltrch\lang1033 elements\f3\rtlch\lang9217 ) \f4\ltrch\lang1033 of the stack will be\f3\rtlch\lang9217  [\f4\ltrch\lang1033 2\f3\rtlch\lang9217 , \f4\ltrch\lang1033 4\f3\rtlch\lang9217 , \f4\ltrch\lang1033 8\f3\rtlch\lang9217 , \f4\ltrch\lang1033 10\f3\rtlch\lang9217 , \f4\ltrch\lang1033 14\f3\rtlch\lang9217 , \f4\ltrch\lang1033 16\f3\rtlch\lang9217 , \f4\ltrch\lang1033 20\f3\rtlch\lang9217 ].\par
+\par
+\f4\ltrch\lang1033 b\f3\rtlch\lang9217 ) \f4\ltrch\lang1033 The value of the variable\f3\rtlch\lang9217  `\f4\ltrch\lang1033 size\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 would be\f3\rtlch\lang9217  \f4\ltrch\lang1033 7\f3\rtlch\lang9217  \f4\ltrch\lang1033 since there are\f3\rtlch\lang9217  \f4\ltrch\lang1033 7\f3\rtlch\lang9217  \f4\ltrch\lang1033 elements in the stack\f3\rtlch\lang9217 . \f4\ltrch\lang1033 The value of the variable\f3\rtlch\lang9217  `\f4\ltrch\lang1033 top\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 would be\f3\rtlch\lang9217  \f4\ltrch\lang1033 7\f3\rtlch\lang9217 , \f4\ltrch\lang1033 indicating the index of the topmost element in the stack\f3\rtlch\lang9217  (\f4\ltrch\lang1033 assuming\f3\rtlch\lang9217  \f4\ltrch\lang1033 0\f3\rtlch\lang9217 -\f4\ltrch\lang1033 based indexing\f3\rtlch\lang9217 ).\par
+\par
+\f4\ltrch\lang1033 c\f3\rtlch\lang9217 ) \f4\ltrch\lang1033 The\f3\rtlch\lang9217  `\f4\ltrch\lang1033 top\f3\rtlch\lang9217 ()` \f4\ltrch\lang1033 method\f3\rtlch\lang9217  \f4\ltrch\lang1033 In the stack would return the element at the top of the stack\f3\rtlch\lang9217 , \f4\ltrch\lang1033 which is\f3\rtlch\lang9217  \f4\ltrch\lang1033 20\f3\rtlch\lang9217  \f4\ltrch\lang1033 In this case\f3\rtlch\lang9217 .\par
+\par
+\f4\ltrch\lang1033 d\f3\rtlch\lang9217 ) \f4\ltrch\lang1033 The stack\f3\rtlch\lang9217  \f4\ltrch\lang1033 Is not full\f3\rtlch\lang9217 . \f4\ltrch\lang1033 The capacity of the stack\f3\rtlch\lang9217  \f4\ltrch\lang1033 Is set to\f3\rtlch\lang9217  \f4\ltrch\lang1033 10\f3\rtlch\lang9217 , \f4\ltrch\lang1033 and the current size\f3\rtlch\lang9217  \f4\ltrch\lang1033 Is\f3\rtlch\lang9217  \f4\ltrch\lang1033 7\f3\rtlch\lang9217 . \f4\ltrch\lang1033 Since the size is less than the capacity\f3\rtlch\lang9217 , \f4\ltrch\lang1033 the stack\f3\rtlch\lang9217  \f4\ltrch\lang1033 Is not full\f3\rtlch\lang9217 .\par
+\par
+\f4\ltrch\lang1033 e\f3\rtlch\lang9217 ) \f4\ltrch\lang1033 To make the stack return to the empty state\f3\rtlch\lang9217 , \f4\ltrch\lang1033 you can call the\f3\rtlch\lang9217  `\f4\ltrch\lang1033 pop\f3\rtlch\lang9217 ()` \f4\ltrch\lang1033 method repeatedly until the stack becomes empty\f3\rtlch\lang9217 . \f4\ltrch\lang1033 Here\f3\rtlch\lang9217 '\f4\ltrch\lang1033 s an example\f3\rtlch\lang9217 :\par
+\par
+```\f4\ltrch\lang1033 java\f3\rtlch\lang9217\par
+\f4\ltrch\lang1033 While\f3\rtlch\lang9217  (!\f4\ltrch\lang1033 stack\f3\rtlch\lang9217 .\f4\ltrch\lang1033 isEmpty\f3\rtlch\lang9217 ()) \{\par
+    \f4\ltrch\lang1033 Stack\f3\rtlch\lang9217 .\f4\ltrch\lang1033 pop\f3\rtlch\lang9217 ();\par
+\}\par
+```\par
+\par
+\f4\ltrch\lang1033 After executing this code\f3\rtlch\lang9217 , \f4\ltrch\lang1033 the stack will be empty\f3\rtlch\lang9217 , \f4\ltrch\lang1033 and the\f3\rtlch\lang9217  `\f4\ltrch\lang1033 size\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 and\f3\rtlch\lang9217  `\f4\ltrch\lang1033 top\f3\rtlch\lang9217 ` \f4\ltrch\lang1033 variables will be reset to their initial values\f3\rtlch\lang9217  (\f4\ltrch\lang1033 size\f3\rtlch\lang9217  = \f4\ltrch\lang1033 0\f3\rtlch\lang9217 , \f4\ltrch\lang1033 top\f3\rtlch\lang9217  = \f4\ltrch\lang1033 0\f3\rtlch\lang9217 ).\par
+\par
+\par
+\par
+\par
+\par
+\par
+
+\pard\ltrpar\sl259\slmult0\cf2\f0\ltrch\fs28\lang1033  \fs24\par
+
+\pard\ltrpar\sa74\sl259\slmult0  \par
+
+\pard\ltrpar\li3502\sa174\sl259\slmult0\cf8\b\fs34 Good Luck \b0\fs24\par
+
+\pard\ltrpar\fi-10\li4260\sl259\slmult0\cf2\f4\fs22 2 \f0\fs24\par
+
+\pard\ltrpar\sl259\slmult0\f4\fs22  \f0\fs24\par
+
+\pard\rtlpar\sa200\sl276\slmult1\qr\cf0\f4\fs22\lang9\par
+}
+ 
